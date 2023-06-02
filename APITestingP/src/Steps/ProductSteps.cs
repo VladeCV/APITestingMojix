@@ -1,8 +1,6 @@
-using APITestingP.Models;
 using RestSharp;
 using TechTalk.SpecFlow;
 using System.Net;
-using Allure.Commons;
 using APITestingP.Models.Request;
 using APITestingP.Models.Response;
 using Newtonsoft.Json;
@@ -17,7 +15,7 @@ namespace APITestingP.Steps
         private RestResponse response;
         private string productId;
         private List<ProductResponse> allProducts;
-        private string authToken;
+        private string token;
         private ProductResponse productResponse;
         private ProductRequest productRequest;
     
@@ -37,7 +35,7 @@ namespace APITestingP.Steps
             var authResponse = client.Execute<UserResponse>(authRequest);
             Assert.That(authResponse.StatusCode, Is.EqualTo(HttpStatusCode.OK));
 
-            authToken = authResponse.Data.token;
+            token = authResponse.Data.token;
         }
         
         [When(@"I send a GET request to products")]
@@ -84,6 +82,44 @@ namespace APITestingP.Steps
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
             productResponse = JsonConvert.DeserializeObject<ProductResponse>(response.Content);
             Assert.IsNotNull(productResponse);
+        }
+      
+        [When(@"I send a POST request with the following data: (.*), (.*), (.*), (.*), (.*)")]
+        public void WhenISendApostRequestWithTheFollowingData(string name, string description, string image, string price, string categoryId)
+        {
+            productRequest = new ProductRequest
+            {
+                name = name,
+                description = description,
+                image = image,
+                price = price,
+                categoryId = categoryId
+            };
+
+            request = new RestRequest("/product", Method.Post);
+            request.AddJsonBody(productRequest);
+            request.AddHeader("Authorization", $"Bearer {token}");
+
+            response = client.Execute(request);
+        }
+
+        [When(@"I send a PUT request with the following data: (.*), (.*), (.*), (.*), (.*)")]
+        public void WhenISendAputRequestWithTheFollowingData(string name, string description, string image, string price, string categoryId)
+        {
+            productRequest = new ProductRequest
+            {
+                name = name,
+                description = description,
+                image = image,
+                price = price,
+                categoryId = categoryId
+            };
+
+            request = new RestRequest($"/product/{productId}", Method.Put);
+            request.AddJsonBody(productRequest);
+            request.AddHeader("Authorization", $"Bearer {token}");
+
+            response = client.Execute(request);
         }
     }
 }

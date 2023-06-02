@@ -153,6 +153,89 @@ namespace APITestingP.Src.Features
             }
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Create a new product")]
+        [NUnit.Framework.TestCaseAttribute("Purple Glasses", "Purple Glasses", "purple-glasses.jpg", "17.99", "7", null)]
+        [NUnit.Framework.TestCaseAttribute("Blue Glasses", "Blue Glasses", "pure-glasses.jpg", "15.99", "7", null)]
+        [NUnit.Framework.TestCaseAttribute("Silver Glasses", "Silver Glasses", "ple-glasses.jpg", "7.99", "7", null)]
+        public void CreateANewProduct(string name, string description, string image, string price, string categoryId, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("name", name);
+            argumentsOfScenario.Add("description", description);
+            argumentsOfScenario.Add("image", image);
+            argumentsOfScenario.Add("price", price);
+            argumentsOfScenario.Add("categoryId", categoryId);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create a new product", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 18
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+    this.FeatureBackground();
+#line hidden
+#line 19
+        testRunner.When(string.Format("I send a POST request with the following data: {0}, {1}, {2}, {3}, {4}", name, description, image, price, categoryId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 20
+        testRunner.Then("the response status code should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 21
+        testRunner.And("the response should contain the product details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Update a product")]
+        [NUnit.Framework.TestCaseAttribute("Purple Glasses", "Purple Glasses", "purple-glasses.jpg", "17.99", "7", null)]
+        public void UpdateAProduct(string name, string description, string image, string price, string categoryId, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("name", name);
+            argumentsOfScenario.Add("description", description);
+            argumentsOfScenario.Add("image", image);
+            argumentsOfScenario.Add("price", price);
+            argumentsOfScenario.Add("categoryId", categoryId);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update a product", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 28
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+    this.FeatureBackground();
+#line hidden
+#line 29
+        testRunner.Given("a product with ID \"20\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 30
+        testRunner.When(string.Format("I send a PUT request with the following data: {0}, {1}, {2}, {3}, {4}", name, description, image, price, categoryId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 31
+        testRunner.Then("the response status code should be 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 32
+        testRunner.And("the response should contain the product details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
