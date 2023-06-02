@@ -1,0 +1,1 @@
+[{"uid":"5c2efb817c24d0a9","name":"Get All Products","time":{"start":1685715974139,"stop":1685715974710,"duration":571},"status":"passed","severity":"normal"},{"uid":"c98592bb978c6567","name":"Get product by ID","time":{"start":1685715974730,"stop":1685715974872,"duration":142},"status":"passed","severity":"normal"}]
