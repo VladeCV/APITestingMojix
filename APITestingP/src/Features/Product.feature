@@ -1,5 +1,5 @@
 Feature: Product
-Simple calculator for adding two numbers
+Gatling DemoStore API, product requests 
     Background:
         Given the Demo Store API is available
         And I am authenticated as admin
