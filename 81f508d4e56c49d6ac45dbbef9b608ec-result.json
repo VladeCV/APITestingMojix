@@ -1,0 +1,130 @@
+{
+  "uuid": "c525c578aa714a8d997bfa7f5ff357e9",
+  "historyId": "Create a new product1872427519",
+  "fullName": "Create a new product",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "fv-az560-909"
+    },
+    {
+      "name": "feature",
+      "value": "Product"
+    }
+  ],
+  "links": [],
+  "name": "Create a new product",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  the Demo Store API is available",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735033813,
+      "stop": 1685735033814
+    },
+    {
+      "name": "And  I am authenticated as admin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735033814,
+      "stop": 1685735033841
+    },
+    {
+      "name": "When  I send a POST request with the following data: Silver Glasses, Silver Glasses, ple-glasses.jpg, 7.99, 7",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735033841,
+      "stop": 1685735033858
+    },
+    {
+      "name": "Then  the response status code should be 200",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735033858,
+      "stop": 1685735033858
+    },
+    {
+      "name": "And  the response should contain the product details",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735033858,
+      "stop": 1685735033858
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "name",
+      "value": "Silver Glasses"
+    },
+    {
+      "name": "description",
+      "value": "Silver Glasses"
+    },
+    {
+      "name": "image",
+      "value": "ple-glasses.jpg"
+    },
+    {
+      "name": "price",
+      "value": "7.99"
+    },
+    {
+      "name": "categoryId",
+      "value": "7"
+    }
+  ],
+  "start": 1685735033813,
+  "stop": 1685735033858
+}

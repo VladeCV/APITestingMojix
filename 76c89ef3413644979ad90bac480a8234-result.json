@@ -1,0 +1,130 @@
+{
+  "uuid": "016b046e52624277b4afb9a7d01e696d",
+  "historyId": "Create a new product1640438245",
+  "fullName": "Create a new product",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "fv-az560-909"
+    },
+    {
+      "name": "feature",
+      "value": "Product"
+    }
+  ],
+  "links": [],
+  "name": "Create a new product",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  the Demo Store API is available",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735032938,
+      "stop": 1685735032960
+    },
+    {
+      "name": "And  I am authenticated as admin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735032961,
+      "stop": 1685735033636
+    },
+    {
+      "name": "When  I send a POST request with the following data: Purple Glasses, Purple Glasses, purple-glasses.jpg, 17.99, 7",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735033636,
+      "stop": 1685735033658
+    },
+    {
+      "name": "Then  the response status code should be 200",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735033658,
+      "stop": 1685735033749
+    },
+    {
+      "name": "And  the response should contain the product details",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735033749,
+      "stop": 1685735033759
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "name",
+      "value": "Purple Glasses"
+    },
+    {
+      "name": "description",
+      "value": "Purple Glasses"
+    },
+    {
+      "name": "image",
+      "value": "purple-glasses.jpg"
+    },
+    {
+      "name": "price",
+      "value": "17.99"
+    },
+    {
+      "name": "categoryId",
+      "value": "7"
+    }
+  ],
+  "start": 1685735032930,
+  "stop": 1685735033761
+}
