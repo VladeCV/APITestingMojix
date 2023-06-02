@@ -1,0 +1,109 @@
+{
+  "uuid": "7ec5cf5b46974610aae7d1aab4b2b1c3",
+  "historyId": "Get All Products",
+  "fullName": "Get All Products",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "fv-az735-612"
+    },
+    {
+      "name": "feature",
+      "value": "Product"
+    }
+  ],
+  "links": [],
+  "name": "Get All Products",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  the Demo Store API is available",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627274,
+      "stop": 1685735627274
+    },
+    {
+      "name": "And  I am authenticated as admin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627274,
+      "stop": 1685735627292
+    },
+    {
+      "name": "When  I send a GET request to products",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627292,
+      "stop": 1685735627303
+    },
+    {
+      "name": "Then  the response status code should be 200",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627303,
+      "stop": 1685735627304
+    },
+    {
+      "name": "And  the response should contain a list of products",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627304,
+      "stop": 1685735627307
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1685735627274,
+  "stop": 1685735627307
+}

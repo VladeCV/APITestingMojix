@@ -1,0 +1,130 @@
+{
+  "uuid": "0e93ba090a7c42cda2e6589fb8b19438",
+  "historyId": "Create a new product-286293445",
+  "fullName": "Create a new product",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "fv-az735-612"
+    },
+    {
+      "name": "feature",
+      "value": "Product"
+    }
+  ],
+  "links": [],
+  "name": "Create a new product",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given  the Demo Store API is available",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627184,
+      "stop": 1685735627184
+    },
+    {
+      "name": "And  I am authenticated as admin",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627184,
+      "stop": 1685735627208
+    },
+    {
+      "name": "When  I send a POST request with the following data: Blue Glasses, Blue Glasses, pure-glasses.jpg, 15.99, 7",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627208,
+      "stop": 1685735627228
+    },
+    {
+      "name": "Then  the response status code should be 200",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627228,
+      "stop": 1685735627228
+    },
+    {
+      "name": "And  the response should contain the product details",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1685735627228,
+      "stop": 1685735627229
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "name",
+      "value": "Blue Glasses"
+    },
+    {
+      "name": "description",
+      "value": "Blue Glasses"
+    },
+    {
+      "name": "image",
+      "value": "pure-glasses.jpg"
+    },
+    {
+      "name": "price",
+      "value": "15.99"
+    },
+    {
+      "name": "categoryId",
+      "value": "7"
+    }
+  ],
+  "start": 1685735627184,
+  "stop": 1685735627229
+}
